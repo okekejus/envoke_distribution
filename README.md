@@ -15,9 +15,9 @@ The form data goes directly into our Data Warehouse, and can be queried using Sp
 This procedure produces the output file used by my script.
 
 The envoke script contains the functions used in this procedure: 
-- `create_contact_dicts(contact_list_dataframe)`: turn a dataframe of contacts into a dict for API interactions.
-- `upsert_contact(contact_information, auth)`: Upserting checks if an email is registered in our database. If True, it returns the contact information. If false, the email is used to create a new contact, based on contact information. 
-- `send_survey(contact_info_dict, html_content, auth)`: Sending out the survey for the registered contact, using customized html content created by a UX designer.
+- `create_contact_dicts`: turn a dataframe of contacts into a dict for API interactions.
+- `upsert_contact`: Upserting checks if an email is registered in our database. If True, it returns the contact information. If false, the email is used to create a new contact, based on contact information. 
+- `send_survey`: Sending out the survey for the registered contact, using customized html content created by a UX designer.
 
 
 The sendout script simply compiles the functions + fetches the email content.
